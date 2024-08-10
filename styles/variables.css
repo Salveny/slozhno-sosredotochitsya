@@ -3,6 +3,13 @@
   и их переопределение под различные устройства
 */
 :root {
-    --main-font: IBM Plex mono, Courier, mono;
-    --accent-color: #ff0070;
+  --bg-color: #FFF1F7;
+  --text-color: #353430;
+  --accent-color: #FF8DCB;
+  --accent-color-title: #FFC2E6;
+  --accent-color-shadow: #FF8DCB;
+  --main-font: IBM Plex mono, Courier, mono;
+  --background-image: url(../images/cover-image.png);
+  --gap-page-mob: 40px;
+  --gap-page-other: 60px;
 }

@@ -4,7 +4,9 @@
   переключая тему
 */
 :root {
+  --bg-color: #FFF1F7;
   --accent-color: #ff8dcb;
+  --background-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light {
@@ -12,4 +14,5 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: var(--background-image);
 }

@@ -1,6 +1,138 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+display: grid;
+grid-template-rows: 1fr min-content 1fr;
+grid-template-areas: 
+"header" 
+"main" 
+"footer";
+gap: var(--gap-page-mob);
+background-image: var(--background-image);
+background-color: var(--bg-color, #FFF1F7);
+background-repeat: no-repeat;
+object-fit: cover;
+object-position: center;
+background-attachment: fixed;
+font-family: var(--main-font);
+color: var(--text-color);
+line-height: 23.4px;
+text-align: left;
+font-size: 18px;
+max-width: 375px;
 
 }
+
+/*@media (min-width >= 376px) {
+  .page {
+    gap: var(--gap-page-other);
+  }
+}*/
+
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 668px;
+  inline-size: 100%;
+  position: relative;
+  grid-area: header;
+  padding-inline-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); 
+  padding-inline-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  height: 100vh;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 25px;
+  width: 25px;
+  border-width: 0px 0px 1px 1px;
+  border-color: #353430;
+  border-style: solid;
+  bottom: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 25px;
+  width: 25px;
+  border-width: 1px 1px 0px 0px;
+  border-color: #353430;
+  border-style: solid;
+  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  font-weight: bold;
+}
+
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  font-size: 18px; 
+  background-color: transparent;
+  border: none;
+  margin-block-end: 10px;
+
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--accent-color-title);
+  text-shadow: 4px 4px 0 var(--accent-color-shadow);
+  line-height: 95.7px;
+  justify-self: start;
+  align-self: center;
+}
+
+.header__content {
+  justify-self: end;
+  align-self: center;
+  text-align: start;
+}
+
+.main {
+  grid-area: main;
+}
+
+.main__content-title {
+  margin-block-end: 20px;
+  font-size: inherit;
+}
+
+.main__content-subtitle {
+  font-size: inherit;
+
+}
+
+.main__content-gallery {
+  display: grid;
+  grid-auto-flow: dense;
+  
+}
+
+img {
+  inline-size: 100%;
+}
+
+
+.footer {
+  grid-area: footer;
+  justify-self: center;
+  align-self: center;
+}
+
