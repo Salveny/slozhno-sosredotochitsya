@@ -4,12 +4,14 @@
 */
 :root {
   --bg-color: #FFF1F7;
-  --text-color: #353430;
+  --main-text-color: #353430;
+  --decor-text-color: #353430;
   --accent-color: #FF8DCB;
+  --accent-color-menu: #353430;
   --accent-color-title: #FFC2E6;
-  --accent-color-shadow: #FF8DCB;
+  --accent-color-1024: #FF0070;
+  --color-rec: #FFF1F7;
   --main-font: IBM Plex mono, Courier, mono;
   --background-image: url(../images/cover-image.png);
-  --gap-page-mob: 40px;
-  --gap-page-other: 60px;
-}
+  
+} 

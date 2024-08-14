@@ -4,44 +4,81 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 display: grid;
-grid-template-rows: 1fr min-content 1fr;
+grid-template-rows: 100vh min-content 100vh;
 grid-template-areas: 
 "header" 
 "main" 
 "footer";
-gap: var(--gap-page-mob);
+gap: clamp(2.5rem, 1.3073rem + 5.0891vw, 3.75rem);
 background-image: var(--background-image);
 background-color: var(--bg-color, #FFF1F7);
 background-repeat: no-repeat;
-object-fit: cover;
-object-position: center;
+background-position: center;
 background-attachment: fixed;
+background-size: cover;
 font-family: var(--main-font);
-color: var(--text-color);
+color: var(--main-text-color);
 line-height: 23.4px;
 text-align: left;
 font-size: 18px;
-max-width: 375px;
+min-inline-size: 375px;
+padding-inline-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); 
+padding-inline-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+a {
+  text-decoration: none;
+  text-shadow: 1.5px 0px 0 var(--accent-color) ;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+button:focus-visible {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.rec::before {
+  content: "REC";
+  position: absolute;
+  text-transform: uppercase;
+  color: var(--color-rec);
+  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  right: clamp(2.375rem, 1.7786rem + 2.5445vw, 3rem);
+}
+
+.rec::after {
+  content: "";
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  top: clamp(1.125rem, 0.5286rem + 2.5445vw, 1.75rem);
+  right: clamp(1.1875rem, 0.5911rem + 2.5445vw, 1.8125rem);
+  border-style: solid;
+  border-radius: 9px;
+  border-color: var(--color-rec);
+  background-color: var(--color-rec);
+  box-shadow: 0 0 4px 2px var(--color-rec);
 
 }
 
-/*@media (min-width >= 376px) {
-  .page {
-    gap: var(--gap-page-other);
-  }
-}*/
-
+.header__theme-menu-list {
+  color: var(--accent-color-menu);
+}
 
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  min-height: 668px;
-  inline-size: 100%;
+  min-block-size: 668px;
   position: relative;
   grid-area: header;
-  padding-inline-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem); 
-  padding-inline-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  height: 100vh;
+  block-size: 100vh;
 }
 
 .decorated-zone::before {
@@ -51,10 +88,10 @@ max-width: 375px;
   height: 25px;
   width: 25px;
   border-width: 0px 0px 1px 1px;
-  border-color: #353430;
+  border-color: var(--accent-color-menu);
   border-style: solid;
-  bottom: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  bottom: clamp(0rem, -0.5964rem + 2.5445vw, 0.625rem);
+  left: clamp(0rem, -0.5964rem + 2.5445vw, 0.625rem);
 }
 
 .decorated-zone::after {
@@ -64,14 +101,15 @@ max-width: 375px;
   height: 25px;
   width: 25px;
   border-width: 1px 1px 0px 0px;
-  border-color: #353430;
+  border-color: var(--accent-color-menu);
   border-style: solid;
-  top: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  top: clamp(0rem, -0.5964rem + 2.5445vw, 0.625rem);
+  right: clamp(0rem, -0.5964rem + 2.5445vw, 0.625rem);
 }
 
 .title-decor {
   background-color: var(--accent-color);
+  color: var(--decor-text-color);
   font-weight: bold;
 }
 
@@ -93,10 +131,16 @@ max-width: 375px;
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--accent-color-title);
-  text-shadow: 4px 4px 0 var(--accent-color-shadow);
+  text-shadow: 4px 4px 0 var(--accent-color );
   line-height: 95.7px;
   justify-self: start;
   align-self: center;
+}
+
+@media (min-width:768px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
 
 .header__content {
@@ -106,33 +150,57 @@ max-width: 375px;
 }
 
 .main {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  gap: clamp(3.125rem, 1.3359rem + 7.6336vw, 5rem);
   grid-area: main;
 }
 
 .main__content-title {
   margin-block-end: 20px;
   font-size: inherit;
+  color: var(--accent-color-menu);
 }
 
 .main__content-subtitle {
   font-size: inherit;
+  margin-block-end: 10px;
+}
 
+.normal {
+  background-color: var(--accent-color);
+  font-weight: normal;
+}
+
+.main__content-block>.main__content-text:not(:last-child) {
+  margin-block-end: 20px;
 }
 
 .main__content-gallery {
   display: grid;
   grid-auto-flow: dense;
+  gap: 10px;
   
 }
 
-img {
+.main__content-gallery-item {
   inline-size: 100%;
+  vertical-align: top; /*убираем отступ у картинки*/
+
 }
 
-
 .footer {
+  height: 100vh;         
+  position: relative;
   grid-area: footer;
   justify-self: center;
   align-self: center;
+  
+}
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--accent-color-title);
+  text-shadow: 2px 2px 0 var(--accent-color);
+
 }
 

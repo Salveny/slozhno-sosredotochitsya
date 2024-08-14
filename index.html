@@ -17,8 +17,10 @@
     <link rel="stylesheet" href="./styles/light.css">
   </head>
 
-  <body class="page">
+  <body class="page theme-light theme-dark">
     <header class="header decorated-zone">
+      <span class="rec" aria-hidden="true">
+    </span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -50,8 +52,7 @@
       </h1>
       <div class="header__content">
         <p class="title-decor">
-          Что делать, когда не можешь  делать ничего
-          Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+          Что делать, когда не можешь  делать ничего<br> Или почему нам так сложно сконцентрироваться, особенно когда очень надо
         </p>
       </div> 
       </title>
@@ -59,9 +60,9 @@
 
     <main class="main">
       
-      <section class="main__content-section">
+      <section class="main__content-why">
         <h2 class="main__content-title">Почему сосредоточиться так сложно</h2>
-        <div>
+        <div class="main__content-block">
           <h3 class="main__content-subtitle title-decor">
             Многозадачность
           </h3>
@@ -81,8 +82,8 @@
       </section>
 
 
-      <section class="main__content-section">
-        <div>
+      <section class="main__content-what">
+        <div class="main__content-block">
           <h2 class="main__content-title">
             Что снижает концентрацию внимания?
           </h2>
@@ -108,39 +109,42 @@
       </section>
 
 
-      <section class="main__content-section">
+      <section class="main__content-how">
         <h2 class="main__content-title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
         </h2>
-        <div>
+        <div class="main__content-block">
           <h3 class="main__content-subtitle  title-decor">
             5 простых (на самом деле не очень) советов
           </h3>
-          <h4>
+          <h4 class="main__content-subtitle normal">
             Представьте небо и облака
           </h4>
           <p class="main__content-text">
             Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. Ведь часто именно тревожные мысли о сложных задачах как раз и мешают эти сложные задачи делать. В такие моменты можно закрыть глаза и представить, что чистое небо — это вы, а облака — тревожные мысли. И сколько бы их ни было — ясное небо всегда будет где-то там, за тучами, и никуда не денется. Это упражнение поможет вернуться в настоящий момент, а не волноваться о потенциальных проблемах из будущего.
           </p>
-          <h4>
+          <h4 class="main__content-subtitle normal">
             Включите музыку
           </h4>
           <p class="main__content-text">
             Но не любую, и не любимую. Любимая может быть связана с сильными положительными эмоциями, которые тоже очень сильно отвлекают. Подойдёт тихая, спокойная, умеренно-ритмичная. Можно вообще попробовать включить плейлист в «белым шумом» или нейромузыкой.
           </p>
-          <h4>
+          <h4 class="main__content-subtitle normal">
             Прогуляйтесь
           </h4>
-          <p>
-            Или даже пробегитесь. Лучше найти парк или лес: один эксперимент показал, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.
+          <p class="main__content-text">
+            Или даже пробегитесь. Лучше найти парк или лес: один эксперимент 
+            <a href="#" target="_blank">
+              показал
+            </a> что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.
           </p>
-          <h4>
+          <h4 class="main__content-subtitle normal">
             Хорошо ешьте
           </h4>
           <p class="main__content-text">
             Мы — не ваша бабушка, но это правда важно. Выбирайте продукты, которые препятствуют резким скачкам сахара в крови. Например, с высоким содержанием клетчатки: овощи, ягоды, бобовые (нут, чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
           </p>
-          <h4>
+          <h4 class="main__content-subtitle normal">
             Читайте
           </h4>
           <p class="main__content-text">
@@ -149,37 +153,37 @@
         </div>
       </section>
 
-      <section class="main__content-section">
-        <h3 class="title-decor">А можно в картинках?</h3>
+      <section class="main__content-img">
+        <h3 class="main__content-subtitle title-decor">А можно в картинках?</h3>
         <div class="main__content-gallery">
-          <picture class="main__content-gallery-img">
+          <picture>
             <source srcset="./images/sunset.avif" type="image/avif">
             <source srcset="./images/sunset.webp" type="image/webp">
-            <img src="./images/sunset.png" alt="Изображение рассвета, солнце встает над горами" loading="lazy">
+            <img class="main__content-gallery-item" src="./images/sunset.png" alt="Изображение рассвета, солнце встает над горами" loading="lazy">
           </picture>  
   
-          <picture class="main__content-gallery-img">
+          <picture>
             <source srcset="./images/ice-cream.avif" type="image/avif">
             <source srcset="./images/ice-cream.webp" type="image/webp">
-            <img src="./images/ice-cream.png" alt="Мультяшное изображение шариков мороженного с фруктами" loading="lazy">
+            <img class="main__content-gallery-item" src="./images/ice-cream.png" alt="Мультяшное изображение шариков мороженного с фруктами" loading="lazy">
           </picture>
   
-          <picture class="main__content-gallery-img">
+          <picture>
             <source srcset="./images/tape.avif" type="image/avif">
             <source srcset="./images/tape.webp" type="image/webp">
-            <img src="./images/tape.png" alt="Изображение аудио-кассеты и пиктограмм курсора компьютера" loading="lazy">
+            <img class="main__content-gallery-item" src="./images/tape.png" alt="Изображение аудио-кассеты и пиктограмм курсора компьютера" loading="lazy">
           </picture>   
             
-          <picture class="main__content-gallery-img">
+          <picture>
             <source srcset="./images/books.avif" type="image/avif">
             <source srcset="./images/books.webp" type="image/webp">
-            <img src="./images/books.png" alt="Изображение стопки книг с чашкой кофе сверху" loading="lazy">
+            <img class="main__content-gallery-item" src="./images/books.png" alt="Изображение стопки книг с чашкой кофе сверху" loading="lazy">
           </picture>  
           
-          <picture class="main__content-gallery-img">
+          <picture>
             <source srcset="./images/street.avif" type="image/avif">
             <source srcset="./images/street.webp" type="image/webp">
-            <img src="./images/street.png" alt="Изображение безлюдной улицы, залитой сиреневым светом" loading="lazy">
+            <img class="main__content-gallery-item" src="./images/street.png" alt="Изображение безлюдной улицы, залитой сиреневым светом" loading="lazy">
           </picture>
         </div>
         
@@ -187,9 +191,13 @@
 
     </main>
     <footer class="footer">
-      <h5 class="header__title">
-        focus
-      </h5>
+      <div class="decorated-zone">
+        <h5 class="footer__title">
+          focus
+        </h5>
+      </div>
+
+      
     </footer>
     <script src="./scripts/script.js"></script>
   </body>
