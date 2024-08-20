@@ -31,10 +31,10 @@ a {
 
 a:focus,
 .header__theme-menu-button:focus {
-  outline: none;  
+  outline: none; 
 }
 
-a:focus-visible {   
+a:focus-visible {
   display: inline-block;
   outline: 1px solid var(--main-text-color);
 }
@@ -225,7 +225,7 @@ img {
   display: block;
 }
 
-.footer {        
+.footer {
   position: relative;
   grid-area: footer;
   height: 100vh;
@@ -258,17 +258,17 @@ img {
     line-height: clamp(6.1875rem, 0.4631rem + 11.9258vw, 8.095625rem);
   }
 
-  .header__content { 
+  .header__content {
     grid-row: 3/4;
     grid-column: 2/3;
   }
 
   .why {
-    grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 1fr; 
+    grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 1fr;
     column-gap: 20px;
   }               
 
-  .multitasking-1 { 
+  .multitasking-1 {
     grid-column: 2/3;
     grid-row: 1/2;
   }
