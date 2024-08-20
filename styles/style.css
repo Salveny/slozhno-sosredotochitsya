@@ -30,16 +30,27 @@ a {
 }
 
 a:focus,
-button:focus {
-  outline: none;
+.header__theme-menu-button:focus {
+  outline: none;  
 }
 
-a:focus-visible {
-  outline: 1px solid var(--text-color);
+a:focus-visible {   
+  display: inline-block;
+  outline: 1px solid var(--main-text-color);
 }
 
-button:focus-visible {
-  border-bottom: 1px solid var(--text-color);
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  display: inline-block;
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--color-min-opacity);
 }
 
 .rec::before {
@@ -69,7 +80,7 @@ button:focus-visible {
 
 .header {
   display: grid;
-  grid-template-rows: min-content 1fr min-content 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   min-block-size: 668px;
   position: relative;
   grid-area: header;
@@ -87,7 +98,6 @@ button:focus-visible {
   border-style: solid;
   bottom: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   left: 0;
-  
 }
 
 .decorated-zone::after {
@@ -113,6 +123,7 @@ button:focus-visible {
   justify-self: end;
   align-self: center;
   display: grid;
+  grid-row: 1/2;
 }
 
 .header__theme-menu-button {
@@ -137,6 +148,10 @@ button:focus-visible {
   row-gap: 10px;
 }
 
+.header__theme-menu-item {
+  padding: 0px, 25px, 0px, 25px;
+}
+
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--accent-color-title);
@@ -144,14 +159,15 @@ button:focus-visible {
   line-height: clamp(5.98125rem, 5.7844rem + 0.8397vw, 6.1875rem);
   justify-self: start;
   align-self: center;
+  grid-row: 2/3;
 }
 
 .header__content {
   align-self: center;
   text-align: start;
   white-space: pre-line;
+  grid-row: 3/4;
 }
-
 
 .main {
   display: grid;
@@ -243,7 +259,7 @@ img {
   }
 
   .header__content { 
-    grid-row: 4/5;
+    grid-row: 3/4;
     grid-column: 2/3;
   }
 
@@ -303,10 +319,9 @@ img {
   }
 }
 
-
-@media (768px <= width <= 1024px) {
+@media (768px <= width <= 1023px) {
   .header__theme-menu {
-    grid-row: 2/3;
+    grid-row: 1/2;
     grid-column: 2/3;
   }
 
@@ -318,7 +333,7 @@ img {
   }
 
   .multitasking-2 {
-    grid-column: 1/2;
+    grid-column: 1/4;
     grid-row: 2/3;
   }
 
@@ -358,13 +373,10 @@ img {
   }
 
   .what {
-    display: grid;
-    grid-template-columns: repeat(3, 315px);
-    grid-template-rows: repeat(2, min-content);
-    
+    column-gap: 20px;
   }
 
-  .multitasking {
+  .multitasking-2 {
     grid-column: 1/2;
     grid-row: 2/3;
   }

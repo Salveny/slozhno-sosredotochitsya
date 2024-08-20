@@ -16,14 +16,14 @@
   --accent-color-title: #DB00FF;
   --accent-color-menu: #FF0070;
   --color-rec: #FF0070;
-
+  --color-min-opacity: rgba(255, 0, 112, 0.4);
+  
   .rec::after {
     visibility: visible;
   }
   .rec::before {
     visibility: visible;
   }
-
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -35,23 +35,16 @@
     --accent-color-title: #DB00FF;
     --accent-color-menu: #FF0070;
     --color-rec: #FF0070;
+    --color-min-opacity: rgba(255, 0, 112, 0.4);
   }
 
   .rec::after {
     visibility: visible;
   }
+
   .rec::before {
     visibility: visible;
   }
-}
-
-a {
-  display: inline-block;
-  text-decoration: underline;
-  text-shadow: 2px 2px 0 var(--accent-color) ;
-}
-.a_noneline {
-  text-decoration: none;
 }
 
 .rec {
