@@ -10,14 +10,13 @@
   */
   --background-image: url(../images/cover-image-light.png);
   --main-text-color: #353430;
-  --bg-color: #FFF1F7;
+  --bg-color: #fff1f7;
   --decor-text-color: #353430;
-  --accent-color: #FF8DCB;
-  --accent-color-title: #FFC2E6;
-  --accent-color-1024: #FF0070;
+  --accent-color: #ff8dcb;
+  --accent-color-title: #ffc2e6;
+  --accent-color-1024: #ff0070;
   --accent-color-menu: #353430;
   --color-min-opacity: rgba(50, 49, 45, 0.4);
-
 
   .rec::after {
     visibility: hidden;
@@ -26,19 +25,3 @@
     visibility: hidden;
   }
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-  --background-image: url(../images/cover-image-light.png);
-  --main-text-color: #353430;
-  --bg-color: #FFF1F7;
-  --decor-text-color: #353430;
-  --accent-color: #FF8DCB;
-  --accent-color-title: #FFC2E6;
-  --accent-color-1024: #FF0070;
-  --accent-color-menu: #353430;
-  --color-min-opacity: rgba(50, 49, 45, 0.4);
-} 
-}
-
-
